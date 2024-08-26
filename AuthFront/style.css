@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #36454F;
+}
+
+.card {
+    padding: 20px;
+    width: 300px;
+    height: auto;
+    background-color: #FFFAFA;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 8px;
+}
+
+.card input {
+    padding: 4px;
+    margin-top: 4px;
+    height: 32px;
+    width: 100%;
+}
+
+.card button {
+    height: 42px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #28A745;
+    font-size: 14px;
+}
+.card button:hover {
+    opacity: 50%;
+}
+
+.login__underText {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.login__underText h3:hover {
+    cursor: pointer;
+    color: #6F42C1;
+}
+
+#registration__validation, #forgotPassword1__validation, #login__validation, #forgotPassword0__validation, #forgotPassword1__validation{
+    display: none;
+    font-size: 14px;
+    color: red;
+}
+#registration, #forgotPassword0, #forgotPassword1, #login__validation, #forgotPassword0__validation, #forgotPassword1__validation {
+    display: none;
+}
+
+#main {
+    padding: 20px;
+    width: 300px;
+    height: auto;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+#main__exit {
+    margin-top: 14px;
+    height: 32px;
+    width: 100%;
+    background-color: red;
+    border: none;
+    color: #FFFAFA;
+    cursor: pointer;
+    border-radius: 4px;
+}
+#main__exit:hover {
+    opacity: 50%;
+} 

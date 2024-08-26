@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <!-- Login -->
+
+    <div id="login" class="card">
+        <div>
+            <h2>Username</h2>
+            <input type="text" id="login__username">
+        </div>
+        <div>
+            <h2>Password</h2>
+            <input type="text" id="login__password">
+        </div>
+        <h3 id="login__validation"></h3>
+        <button id="login__btn" onclick="logIn()">Log in</button>
+        <div class="login__underText">
+            <h3 onclick="cardChanger('login', 'forgotPassword0')">Forgot password?</h3>
+            <h3 onclick="cardChanger('login', 'registration')">Registration</h3>
+        </div>
+    </div>
+
+    <!-- registration -->
+
+    <div id="registration" class="card">
+        <div>
+            <h2>Username</h2>
+            <input type="text" id="registration__username">
+        </div>
+        <div>
+            <h2>Email</h2>
+            <input type="text" id="registration__email">
+        </div>
+        <div>
+            <h2>Password</h2>
+            <input type="password" id="registration__password">
+        </div>
+        <div>
+            <h2>Repeat Password</h2>
+            <input type="password" id="registration__passwordRepeated">
+        </div>
+        <h3 id="registration__validation"></h3>
+        <button id="registration__btn" onclick="registration()">Registration</button>
+        <button id="forgotPassword0__backBtn" onclick="cardChanger('registration', 'login')">Back</button>
+    </div>
+
+    <!-- forgot password step one -->
+
+    <div id="forgotPassword0" class="card">
+        <div>
+            <h2>Email</h2>
+            <input type="text" id="forgotPassword0__email">
+        </div>
+        <h3 id="forgotPassword0__validation"></h3>
+        <button id="forgotPassword0__resetBtn" onclick=" forgotPasswordEmailCheck()">Reset Password</button>
+        <button id="forgotPassword0__backBtn" onclick="cardChanger('forgotPassword0', 'login')">Back</button>
+    </div>
+
+    <!-- forgot password step two -->
+
+    <div id="forgotPassword1" class="card">
+        <div>
+            <h2>New Password</h2>
+            <input type="password" id="forgotPassword1__password">
+        </div>
+        <div>
+            <h2>Repeat New Password</h2>
+            <input type="password" id="forgotPassword1__passwordRepeated">
+        </div>
+        <h3 id="forgotPassword1__validation"></h3>
+        <button id="forgotPassword1__btn" onclick="changePassword()">Submite</button>
+        <button id="forgotPassword0__backBtn" onclick="cardChanger('forgotPassword1', 'forgotPassword0')">Back</button>
+    </div>
+
+    <div id="main">
+        <h1 id="main__header"></h1>
+        <button id="main__exit" onclick="cardChanger('main', 'login'), deleteJWT()">Exit</button>
+    </div>
+
+    <script src="./main.js" type="module"></script>
+</body>
+</html>
